@@ -34,7 +34,12 @@
     <div class="container">
         <div class="table_container border rounded my-4">
             <div class="card-header bg-dark text-light font-weight-bold">List of Commissioned Work</div>
-            <table class="table thead-light table-striped ">   
+            <div class="card-body" id="well-section">
+
+                    <!-- Content will go in here -->
+        
+                  </div>
+            <!-- <table class="table thead-light table-striped ">   
                 <thead>
                     <tr>
                         <th scope="col">Name</th>
@@ -46,7 +51,7 @@
                 </thead>
                 <tbody>
                 </tbody>
-            </table>
+            </table> -->
         </div>
         <form class="border rounded my-4 pb-3">
             <div class="card-header bg-darK text-dark font-weight-bold">Add a Job</div>
@@ -70,47 +75,12 @@
         </form>
     </div>
 
-<script>
-    $("#submit").on("click", function () {
-        event.preventDefault();
-    
-        // save variables from form
-        var name = $("#name").val().trim();
-        var telephone = $("#telephone").val().trim();
-        var email = $("#email").val().trim();
-        var description = $("#description").val().trim();
-    
-        // push variables to database
-        database.ref("").push({
-            name: name,
-            telephone: telephone,
-            email: email,
-            description: description,
-        });
-    
-        // reset form
-        $("#name").val("");
-        $("#telephone").val("");
-        $("#email").val("");
-        $("#description").val(""); 
-    });
-    
-    // when a new train gets added
-    database.ref("").on("child_added", function (snapshot) {
-        var data= snapshot.val();
-    
-    // display train schedule
-        $("tbody").append("<tr><td>" + data.name + "</td><td>" + data.telephone + "</td><td>" + data.email + "</td><td>" + description + "</td></tr>");
-    });
-
-    </script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-        <script src="../js/admin.js"></script>
+        <script src="../js/commissions.js"></script>
         <!-- <script>
                 baguetteBox.run('.tz-gallery');
         </script> -->

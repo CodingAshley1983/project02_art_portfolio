@@ -136,8 +136,9 @@
   </div>
 
   <!-- About The Artist -->
-  <a name="about">
-    <div class="container" id="about-container">
+  
+    <div class="container section scrollspy" id="about-container">
+        <a name="about">
       <h3>About C.J. Frei</h3>
       <div>
         <div id="bio">
@@ -198,6 +199,10 @@
           }, 500);
       });
     });
+
+    $(document).ready(function(){
+    $('.scrollspy').scrollSpy();
+  });
 
     
   </script>

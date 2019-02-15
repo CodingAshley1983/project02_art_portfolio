@@ -92,7 +92,16 @@ body{
   color: rgb(36, 224, 224);
   margin-left:20px;
   margin-top: 40px;
-}
+    /* position: absolute; */
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    /* overflow: hidden; */
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+
 #commission-content{
   padding: 0 !important;
 }
@@ -109,7 +118,9 @@ h2.neon-heading {
   font-size: 80px;
   font-weight: 200;
   text-align: center;
-  margin-top:-45px;
+  /* margin-top:-45px; */
+  margin: 0 auto;
+
 }
 h2.neon-heading.first {
   text-shadow: 0px 0px 10px #9D00FF,
@@ -284,7 +295,6 @@ hr{
 
 #portfolioh2{
   font-family: 'Dosis', Calibri, sans-serif;
-  
   font-size: 50px;
   font-weight: 200;
   text-align: center;
@@ -371,4 +381,9 @@ hr{
 }
 #footer{
    text-align:center;
+}
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
 }
