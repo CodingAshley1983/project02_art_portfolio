@@ -19,7 +19,7 @@ module.exports = function(app) {
     });
   });
 
-  // Allow a user to post a new artwork
+    // Allow a user to post a new artwork
   app.post("/api/artwork", function(req, res) {
     db.Artwork.create(req.body)
       .then(function(dbArtwork) {
